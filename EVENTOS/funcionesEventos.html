@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       window.onload = function() {
+            function manejador(elEvento) {
+            var evento = elEvento || window.event;
+            var caracter = evento.charCode || evento.keyCode;
+            document.getElementsByTagName('p').item(0).innerHTML +=
+            String.fromCharCode(caracter);
+        }
+        document.onkeypress = manejador;
+    }
+    </script>
+</head>
+<body>
+        <p id="ok">Ves escribiendo...</p>
+</body>
+</html>

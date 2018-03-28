@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <noscript>
+        <p>Este navegador no tiene habilitado</p>
+    </noscript>
+    <script>
+        var nums =[];
+     for(var i =0; i<5; i++){
+         var num = prompt("Entra um numero: ");
+         num = parseInt(num);
+         nums.push(num);
+         
+     }
+   
+
+     var numAct, min=nums[0], max=nums[0];
+
+        for(var i=0; i< nums.length; i++){
+            numAct = nums[i];
+            if(numAct < min) min =numAct;
+            if(numAct > max) max =numAct;
+        }
+        document.write("El numero mayor es: " + max); 
+        document.write("<br>El numero menor es: " + min);
+     
+       
+    </script>
+</body>
+</html>
